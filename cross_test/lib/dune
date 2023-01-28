@@ -1,0 +1,4 @@
+(library
+ (name cross_test)
+ (public_name cross_test)
+ )

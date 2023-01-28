@@ -1,0 +1,3 @@
+; TODO: this is supposed to apply to the whole project, but does not get picked up
+;(env
+;  (static (link_flags :standard -cclib -static)))

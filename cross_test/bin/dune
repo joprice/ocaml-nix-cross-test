@@ -1,0 +1,31 @@
+(executable
+ (public_name cross_test)
+ (name main)
+ (libraries cross_test)
+ (ctypes
+   (external_library_name sdl2)
+   (build_flags_resolver pkg_config)
+   (headers (include "SDL.h"))
+   (type_description
+    (instance Type)
+    (functor Type_description))
+   (function_description
+    (concurrency unlocked)
+    (instance Functions)
+    (functor Function_description))
+   (generated_types Types_generated)
+  (generated_entry_point Cross_test_C))
+ ; ppx_deriving_yojson.runtime)
+ ;(link_flags -linkall)
+ ;(ocamlopt_flags (:standard -ccopt -static -cclib -static -cclib -no-pie -verbose))
+ ;(preprocess (pps ppx_deriving_yojson))
+)
+
+; TODO: figure out how to move this to somewhere central
+(env
+  (static
+    ;(flags (:standard -ccopt -static -cclib -static -cclib -no-pie -verbose)
+    (flags (:standard -ccopt -static -cclib -no-pie -verbose)
+  )
+   )
+)

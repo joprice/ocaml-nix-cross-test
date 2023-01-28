@@ -1,0 +1,14 @@
+(executable
+ (public_name bin-no-ctypes)
+ (name main)
+ (libraries cross_test bigstringaf); yojson)
+ ;(ocamlopt_flags (:standard -ccopt -static -cclib -static -cclib -no-pie -verbose))
+)
+
+(env
+  (static
+    ;(flags (:standard -ccopt -static -cclib -static -cclib -no-pie -verbose)
+    (flags (:standard -ccopt -static -cclib -no-pie -verbose)
+  )
+   )
+)
